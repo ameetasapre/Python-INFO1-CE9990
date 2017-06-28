@@ -1,0 +1,33 @@
+"""
+Use If Elif and Else statements to calculate cost of shipping
+"""
+
+import sys
+
+quantity = int(input("How many pants did you buy?"))
+country = input("Which country are you shipping to?")
+
+
+if country == "USA":
+    if quantity > 50 :
+        print("Shipping costs $25")
+    elif quantity <= 50 and quantity > 25:
+        print("Shipping costs $10")
+    elif quantity <= 25 and quantity > 5:
+        print("Shipping costs $5")
+    elif quantity <= 5:
+        print("Shipping is free")
+
+
+elif country == "Canada":
+    if quantity > 50:
+        print("Shipping costs $25")
+    elif quantity <= 50 and quantity > 25:
+        print("Shipping costs $10")
+    elif quantity <= 25 and quantity > 5:
+        print("Shipping costs $5")
+    elif quantity <=5:
+        print("Shipping is free")
+
+
+else: print("Shipping to selected country is not available")
