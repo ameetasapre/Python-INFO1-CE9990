@@ -1,0 +1,43 @@
+"""
+graph.py
+
+program to draw graph using nested loops"""
+
+import sys
+
+r = int(input("How many rows of boxes?"))
+c = int(input("How many columns of boxes?"))
+rs = int(input("How many rows of spaces in each box?"))
+cs = int(input("How many columns of spaces in each box?"))
+
+
+rows = 1
+while rows <= r:
+    
+    columns=1
+    while columns <= c:
+        print("+",end = "")
+        columnSpaces = 1
+        while columnSpaces <= cs:
+            print("-",end = "")            
+            columnSpaces = columnSpaces + 1
+        columns = columns + 1
+    print()
+
+    rowSpaces = 1
+    while rowSpaces <= rs:
+        rows1 = 1
+        while rows1 <= r:
+            print("|", end = "")
+            columns1 = 1
+            while columns1 <= cs:
+                print(" ", end ="")
+                columns1 = columns1 + 1
+            rows1 = rows1 + 1
+        print("|")
+        rowSpaces = rowSpaces + 1
+    rows = rows + 1
+        
+
+
+
